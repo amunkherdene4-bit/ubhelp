@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Academy | Strategic Workforce Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR MENU -->
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidenav-links">
+            <a href="#home" onclick="closeNav()">Home</a>
+            <a href="#about" onclick="closeNav()">About</a>
+            <a href="#events" onclick="closeNav()">Events</a>
+            <a href="#training" onclick="closeNav()">Training</a>
+            <a href="#news" onclick="closeNav()">News</a>
+            <a href="#book" onclick="closeNav()">Book Online</a>
+            <a href="#contact" onclick="closeNav()">Contact Us</a>
+            <a href="#donate" class="side-donate" onclick="closeNav()">Donate Now</a>
+        </div>
+    </div>
+
+    <!-- CORPORATE HEADER -->
+    <header class="navbar">
+        <div class="container header-content">
+            <div class="header-left">
+                <!-- Hamburger Menu Trigger -->
+                <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
+                <div class="logo">
+                    <a href="#">GLOBAL<b>ACADEMY</b></a>
+                </div>
+            </div>
+            <nav class="desktop-nav">
+                <!-- Investors prioritize these links -->
+                <a href="#impact">Impact Report</a>
+                <a href="#transparency">Transparency</a>
+                <a href="#partner">Partnerships</a>
+                <a href="#donate" class="btn-donate-header">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="container">
+                <span class="badge">501(c)(3) Non-Profit</span>
+                <h1>Building Bridges to Global Success</h1>
+                <p>Industry-leading workforce development and inclusive education through strategic professional training.</p>
+                <div class="hero-cta">
+                    <a href="#impact" class="btn-primary">View Impact Report</a>
+                    <a href="#partner" class="btn-secondary">Corporate Partnership</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSPARENCY SECTION -->
+        <section id="transparency" class="transparency-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Accountability & Governance</h2>
+                    <p>Meeting the highest global standards of financial integrity.</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <h3>IRS Determination</h3>
+                        <p>Official 501(c)(3) status verification letter.</p>
+                        <a href="#" class="link">View PDF →</a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Annual Report 2025</h3>
+                        <p>Detailed breakdown of community impact and fund use.</p>
+                        <a href="#" class="link">Download →</a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Board of Directors</h3>
+                        <p>Strategic leadership and governance structure.</p>
+                        <a href="#" class="link">Meet Team →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BONCHAT AI BOT -->
+    <div class="bonchat-container">
+        <button class="chat-toggle" onclick="toggleChat()">
+            💬 Let’s chat - BonChat?
+        </button>
+        <div id="chatWindow" class="chat-ui">
+            <div class="chat-head">
+                <span>BonChat Support</span>
+                <button onclick="toggleChat()">✕</button>
+            </div>
+            <div id="chatBody" class="chat-msgs">
+                <div class="ai-bubble">Hello! Welcome to Global Academy. How can I help you today?</div>
+            </div>
+            <div class="chat-input-wrapper">
+                <input type="text" id="userInput" placeholder="Ask about programs..." onkeypress="handleEnter(event)">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMPROVED FOOTER & CONTACT US -->
+    <footer class="main-footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-footer">GLOBAL<b>ACADEMY</b></div>
+                <p>A registered 501(c)(3) non-profit dedicated to professional excellence.</p>
+                <div class="tax-info">
+                    <span>EIN: 12-3456789</span>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@globalacademy.org">info@globalacademy.org</a></p>
+                <p>Global Academy HQ</p>
+            </div>
+            <div class="footer-legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Global Academy. Your donations are tax-deductible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
