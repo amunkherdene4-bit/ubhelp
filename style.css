@@ -64,18 +64,28 @@ body {
         gap: 8px;
         outline: none;
 }
-
+/* Логоны ерөнхий блок */
 .logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     text-decoration: none;
     color: var(--navy);
+    border: none !important;
 }
 
 .logo b {
     color: var(--primary);
 }
+/* Лого зургийг (icon) загваржуулах */
 .site-logo {
+    display:flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    border: none !important;
     width: 60px;  /* Дугуйн хэмжээ (өргөн) */
     height: 60px; /* Дугуйн хэмжээ (өндөр) - Өргөнтэй ижил байх ёстой */
     object-fit: contain; /* Зургийг дугуй дотор гажуудуулахгүй багтаана */
@@ -86,6 +96,30 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Сонголтоор: Үл ялиг сүүдэр нэмэх */
 }
 
+/* Текстийг дээр дээрээс нь байрлуулах */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+/* UB бичигний загвар */
+.brand-top {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy); /* Таны үндсэн хар хөх өнгө */
+    letter-spacing: -0.5px;
+}
+/* ASSOCIATION бичигний загвар */
+.brand-bottom {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary); /* Таны үндсэн цэнхэр өнго */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 .desktop-nav a {
     margin-left: 30px;
     text-decoration: none;
