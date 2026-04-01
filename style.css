@@ -42,6 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 
 .header-left {
@@ -68,7 +69,7 @@ body {
 .logo a {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     text-decoration: none;
@@ -86,19 +87,29 @@ body {
     gap: 12px;
     text-decoration: none;
     border: none !important;
-    width: 60px;  /* Дугуйн хэмжээ (өргөн) */
-    height: 60px; /* Дугуйн хэмжээ (өндөр) - Өргөнтэй ижил байх ёстой */
+    width: 40px;  /* Дугуйн хэмжээ (өргөн) */
+    height: 40px; /* Дугуйн хэмжээ (өндөр) - Өргөнтэй ижил байх ёстой */
     object-fit: contain; /* Зургийг дугуй дотор гажуудуулахгүй багтаана */
     background-color: white; /* Хэрэв header өөр өнгөтэй бол цагаан дэвсгэр хийнэ */
     border-radius: 50%; /* Зургийг төгс дугуй болгоно */
-    padding: 5px; /* Лого болон дугуй хүрээний хоорондох зай */
-    border: 2px solid #ddd; /* Сонголтоор: Нарийхан хүрээ нэмэх */
+    padding: 0; /* Лого болон дугуй хүрээний хоорондох зай */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Сонголтоор: Үл ялиг сүүдэр нэмэх */
+    border-radius: 50%; /* Дугуй хэлбэрт оруулах */
 }
 
 /* Текстийг дээр дээрээс нь байрлуулах */
 .logo-text {
-    display: flex;
+    display: none !important; /* Гар утсан дээр текстийг нуух */
+    /* Хэрэв текстийг үлдээхээр сонговол (дээрх display:none-ыг арилгаад) */
+    /*
+    .brand-top {
+        font-size: 16px;
+    }
+    .brand-bottom {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    */
     flex-direction: column;
     justify-content: center;
     line-height: 1.1;
@@ -186,7 +197,7 @@ body {
 
 /* HERO */
 .hero {
-    padding: 100px 0;
+    padding: 60px 0;
     background: #f8fafc ;
     text-align: center;
 }
@@ -216,20 +227,28 @@ body {
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 28px;
     font-family: 'Montserrat';
     margin: 25px 0;
     letter-spacing: -2px;
     color: var(--navy);
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 15px;
     color: #64748b;
     max-width: 750px;
     margin: 0 auto 45px;
+    margin-bottom: 30px;
+    padding: 0 10px;
 }
-
+.hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
 .btn-primary {
     background: var(--primary);
     color: white;
@@ -249,6 +268,17 @@ body {
     margin-left: 15px;
     color: var(--dark);
     display: inline-block;
+}
+btn-main, .btn-outline {
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 14px;
+    max-width: 300px;
+    width: 100%;
+    justify-content: center;
 }
 
 /* TRANSPARENCY CARDS */
@@ -499,6 +529,9 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
+    .navbar {
+        padding: 10px 0;
+    }
     .doc-grid {
         grid-template-columns: 1fr;
     }
@@ -546,7 +579,7 @@ body {
 } 
 }
 /* --- ГАР УТАСАН ДЭЭРХ ЗАКВАРЫГ САЙЖРУУЛАХ (RESPONSIVE) --- */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     
     /* 1. HEADER-ИЙН "MENU" ТОВЧЛУУРЫГ ЦЭВЭРХЭН БОЛГОХ */  
     .menu-trigger {
