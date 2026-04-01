@@ -75,6 +75,16 @@ body {
 .logo b {
     color: var(--primary);
 }
+.site-logo {
+    width: 60px;  /* Дугуйн хэмжээ (өргөн) */
+    height: 60px; /* Дугуйн хэмжээ (өндөр) - Өргөнтэй ижил байх ёстой */
+    object-fit: contain; /* Зургийг дугуй дотор гажуудуулахгүй багтаана */
+    background-color: white; /* Хэрэв header өөр өнгөтэй бол цагаан дэвсгэр хийнэ */
+    border-radius: 50%; /* Зургийг төгс дугуй болгоно */
+    padding: 5px; /* Лого болон дугуй хүрээний хоорондох зай */
+    border: 2px solid #ddd; /* Сонголтоор: Нарийхан хүрээ нэмэх */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Сонголтоор: Үл ялиг сүүдэр нэмэх */
+}
 
 .desktop-nav a {
     margin-left: 30px;
@@ -142,11 +152,26 @@ body {
 
 /* HERO */
 .hero {
-    padding: 120px 0;
-    background: var(--light);
+    padding: 100px 0;
+    background: #f8fafc ;
     text-align: center;
 }
-
+.hero-content p {
+    font-size: 18px;
+    color: #64748b; /* Сааралдуу өнгө */
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.hero-section {
+    padding: 100px 0; /* Дээд, доод талын зай */
+    background-color: var(--white); /* Эсвэл өөр цайвар өнгө */
+    text-align: center;
+}
 .badge {
     background: #dbeafe;
     color: var(--primary);
@@ -447,7 +472,16 @@ body {
     .desktop-nav {
         display: none;
     }
-
+    .hero-content p {
+        font-size: 16px;
+    }
+.hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
     .hero h1 {
         font-size: 28px;
     }
@@ -480,8 +514,7 @@ body {
 /* --- ГАР УТАСАН ДЭЭРХ ЗАКВАРЫГ САЙЖРУУЛАХ (RESPONSIVE) --- */
 @media (max-width: 768px) {
     
-    /* 1. HEADER-ИЙН "MENU" ТОВЧЛУУРЫГ ЦЭВЭРХЭН БОЛГОХ */
-    /* Зураг 6 дээрх хүрээ болон саарал дэвсгэрийг арилгана */
+    /* 1. HEADER-ИЙН "MENU" ТОВЧЛУУРЫГ ЦЭВЭРХЭН БОЛГОХ */  
     .menu-trigger {
         background: transparent !important; /* Саарал дэвсгэрийг арилгах */
         border: none !important;            /* Хүрээг арилгах */
@@ -497,7 +530,7 @@ body {
         padding: 5px 0 !important;
     }
 
-    /* 2. CHAT BOT-ЫГ АВСААРХАН БОЛГОХ (Зураг 7-ийн алдааг засах) */
+    /* 2. CHAT BOT-ЫГ АВСААРХАН БОЛГОХ */
     /* Чатны цонх дэлгэцийг бүхэлд нь таглахгүй болгоно */
     .chat-ui {
         width: 85vw !important; /* Дэлгэцийн өргөний 85% (ирмэгээс зайтай) */
@@ -561,4 +594,36 @@ body {
     .footer-contact, .footer-legal {
         text-align: center;
     }
+}
+.accountability-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('family.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px; /* Дээд доод талын зайг тохируулна */
+    text-align: center;
+}
+.your-section-class {
+    /* Зургийг арын дэвсгэр болгох */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('family.jpg');
+    
+    /* Зургийн тохиргоо */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Доторх зай болон текстийн загвар */
+    padding: 80px 20px;
+    text-align: center;
+    color: white; /* Текстийг цагаан болгох */
+    border-radius: 8px; /* Буланг нь бага зэрэг бөөрөнхийлөх */
+}
+
+.your-section-class h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.your-section-class p {
+    font-size: 1.2rem;
 }
