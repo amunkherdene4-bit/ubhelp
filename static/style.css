@@ -93,8 +93,7 @@ body {
     background-color: white; /* Хэрэв header өөр өнгөтэй бол цагаан дэвсгэр хийнэ */
     border-radius: 50%; /* Зургийг төгс дугуй болгоно */
     padding: 0; /* Лого болон дугуй хүрээний хоорондох зай */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Сонголтоор: Үл ялиг сүүдэр нэмэх */
-    border-radius: 50%; /* Дугуй хэлбэрт оруулах */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Сонголтоор: Үл ялиг сүүдэр нэмэх */ 
 }
 
 /* Текстийг дээр дээрээс нь байрлуулах */
@@ -537,7 +536,9 @@ btn-main, .btn-outline {
     }
 
     .desktop-nav {
-        display: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
     .hero-content p {
         font-size: 16px;
@@ -693,4 +694,150 @@ btn-main, .btn-outline {
 
 .your-section-class p {
     font-size: 1.2rem;
+}
+/* Modal-ийн арын дэвсгэр */
+.modal {
+    display: none; 
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Арын хэсгийг бүдгэрүүлнэ */
+    z-index: 999;
+}
+
+/* Нэвтрэх хайрцаг (Цагаан хэсэг) */
+.modal-content {
+    background: #ffffff;
+    width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: left; /* Текстүүдийг зүүн тийш харуулна */
+    font-family: 'Inter', sans-serif; 
+}
+
+/* Хаах "x" товч */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #002d72;
+    font-weight: 700;
+}
+.subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+/* Оруулах талбарууд (Input) */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5dbcc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3 ease;
+}
+.input-group input:focus {
+    border-color: #0046ad;
+    box-shadow: 0 0 0 3px rgba(0, 70, 173, 0.1);
+    outline: none;
+}
+
+
+/* "Sign In" товчлуур */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #0046ad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.submit-btn:hover {
+    background-color: #00358a; 
+}
+/* Create One холбоос */
+.signup-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #444;
+}
+
+.signup-text a {
+    color: #0046ad;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* Remember me болон Forgot Password */
+.form-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.form-options a {
+    color: #0046ad;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Нэвтрэх (Login) товчийг цэнхэр болгох */
+.login-trigger {
+    background-color: #0046ad; /* Гүн цэнхэр өнгө */
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.login-trigger:hover {
+    background-color: #00358a; /* Хулгана очиход арай бараан цэнхэр */
+}
+
+/* Хандив (Donate Now) товчийг ногоон болгох */
+.btn-donate-header {
+    background-color: #28a745 !important; /* Sidebar-ийн ногоон өнгө */
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn-donate-header:hover {
+    background-color: #218838 !important; /* Хулгана очиход арай бараан ногоон */
 }
