@@ -942,7 +942,7 @@ btn-main, .btn-outline {
         margin-left: 5px;
     }
     .logo-img {
-        width: auto; !important;
+        width: auto !important;
         height: 30px;
     }
     .container {
