@@ -37,7 +37,17 @@ body {
     top: 0;
     z-index: 1000;
 }
-
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -136,6 +146,7 @@ body {
     font-weight: 600;
     color: #475569;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .btn-donate-header {
@@ -242,7 +253,15 @@ body {
     margin: 0 auto 45px;
     margin-bottom: 30px;
     padding: 0 10px;
+    text-align: center;
 }
+.hero-btns { 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
 .hero-actions {
     flex-direction: column;
     align-items: center;
@@ -527,7 +546,7 @@ btn-main, .btn-outline {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 10px 0;
     }
@@ -539,6 +558,7 @@ btn-main, .btn-outline {
         display: flex;
         align-items: center;
         gap: 20px;
+        margin-right: 20px;
     }
     .hero-content p {
         font-size: 16px;
@@ -551,7 +571,8 @@ btn-main, .btn-outline {
         gap: 10px;
     }
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px;
+        text-align: center;
     }
 
     .footer-grid {
@@ -580,7 +601,14 @@ btn-main, .btn-outline {
 } 
 }
 /* --- ГАР УТАСАН ДЭЭРХ ЗАКВАРЫГ САЙЖРУУЛАХ (RESPONSIVE) --- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .container{
+        width: 95%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
     
     /* 1. HEADER-ИЙН "MENU" ТОВЧЛУУРЫГ ЦЭВЭРХЭН БОЛГОХ */  
     .menu-trigger {
@@ -662,7 +690,7 @@ btn-main, .btn-outline {
     .footer-contact, .footer-legal {
         text-align: center;
     }
-}
+
 .accountability-section {
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('family.jpg');
     background-size: cover;
@@ -841,3 +869,31 @@ btn-main, .btn-outline {
 .btn-donate-header:hover {
     background-color: #218838 !important; /* Хулгана очиход арай бараан ногоон */
 }
+.btn-donate-header, .login-trigger {
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+    width: auto;
+    padding: 8px 16px;
+    white-space: nowrap;
+    
+}
+.accountability-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('family.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px; /* Дээд доод талын зайг тохируулна */
+    text-align: center;
+    color: white; /* Текстийг цагаан болгох */
+    border-radius: 8px; /* Буланг нь бага зэрэг бөөрөнхийлөх */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 20px;
+}
+.family-image-container img {
+        width: 100%;
+        height: auto;
+    }
+    
