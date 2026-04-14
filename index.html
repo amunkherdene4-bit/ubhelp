@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,210 @@
             height: 80px;
             opacity: 0.4;
         }
+ 
+        /* ========== DONATE OVERLAY ========== */
+        #donateOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+        #donateOverlay.active {
+            display: flex;
+        }
+        .donate-modal {
+            background: #ffffff;
+            width: 480px;
+            max-width: 95vw;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+            position: relative;
+        }
+        .donate-header {
+            background: linear-gradient(135deg, #0047AB, #1a6dd4);
+            padding: 36px 40px 28px;
+            text-align: center;
+            color: white;
+        }
+        .donate-header .heart-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .donate-header h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .donate-header p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        .donate-body {
+            padding: 32px 40px 36px;
+        }
+        .donate-body label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        .amount-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .amount-btn {
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            padding: 12px 8px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .amount-btn:hover,
+        .amount-btn.selected {
+            border-color: #0047AB;
+            background: #EFF6FF;
+            color: #0047AB;
+        }
+        .donate-input-row {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .donate-input-row span {
+            padding: 12px 14px;
+            background: #f9fafb;
+            font-size: 15px;
+            font-weight: 600;
+            color: #6b7280;
+            border-right: 1px solid #d1d5db;
+        }
+        .donate-input-row input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 12px 14px;
+            font-size: 15px;
+            color: #111827;
+        }
+        .donate-name-row {
+            margin-bottom: 20px;
+        }
+        .donate-name-row input {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 14px;
+            outline: none;
+            color: #111827;
+            box-sizing: border-box;
+        }
+        .donate-name-row input:focus {
+            border-color: #0047AB;
+            box-shadow: 0 0 0 3px rgba(0,71,171,0.1);
+        }
+        .donate-submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .donate-submit-btn:hover {
+            background: #218838;
+        }
+        #donateSuccess {
+            display: none;
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            color: #166534;
+            font-size: 14px;
+            text-align: center;
+        }
+        .donate-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 20px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .donate-close:hover {
+            background: rgba(255,255,255,0.35);
+        }
+ 
+        /* ========== FLOATING DONATE BUTTON ========== */
+        .floating-donate {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 16px 28px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(40,167,69,0.45);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+        }
+        .floating-donate:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(40,167,69,0.5);
+        }
+ 
+        /* Chatbot байгаа бол donate товчийг арай дээш байрлуул */
+        @media (max-width: 768px) {
+            .floating-donate {
+                bottom: 90px;
+                right: 16px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
-
+ 
 <body>
-
+ 
     <!-- SIDEBAR MENU -->
     <div id="sideNav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -41,48 +240,44 @@
             <a href="#book" onclick="closeNav()">Book Online</a>
             <a href="#contact" onclick="closeNav()">Contact Us</a>
             <a href="#" class="login-trigger">Login</a>
-            <a href="#donate" class="side-donate" onclick="closeNav()">Donate Now</a>
+            <a href="#" class="side-donate" onclick="closeNav(); openDonate();">Donate Now</a>
         </div>
     </div>
-
+ 
     <!-- HEADER -->
     <header class="navbar">
         <div class="container header-content">
-  
-          <div class="header-left">
+            <div class="header-left">
                 <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
                 <div class="logo">
                     <a href="#">
-                        <img src="static/Logo.jpg" alt="UB Association Logo" style="height:40px; vertical-align:middle; margin-right:10px;">
-                        UB <b>ASSOCIATION</b>
+                        <img src="static/Logo.jpg" alt="UB Association Logo" style="height: 60px; vertical-align:middle; margin-right:10px;">
                     </a>
                 </div>
             </div>
-            <nav class="desktop-nav">
-  
-                <a href="#impact">Impact Report</a>
+            <nav class="desktop-nav"> 
                 <a href="#transparency">Transparency</a>
                 <a href="#partner">Partnerships</a>
                 <a href="#" class="login-trigger">Login</a>
-                <a href="#donate" class="btn-donate-header">Donate Now</a>
+                <a href="#" class="btn-donate-header" onclick="openDonate(); return false;">Donate Now</a>
             </nav>
         </div>
     </header>
-
+ 
     <main>
-
+ 
         <!-- HERO -->
         <section class="hero" id="home">
             <div class="container">
                 <h1>Building a Better Future, Together</h1>
                 <p>Empowering communities through education, transparency, and sustainable partnerships. Join us in making a lasting impact.</p>
-                <div class="hero-btns">
-                    <a href="#impact" class="btn-primary">View Impact Report</a>
+  
+              <div class="hero-btns">
                     <a href="#partnerships" class="btn-secondary">Corporate Partnership</a>
                 </div>
             </div>
         </section>
-
+ 
         <!-- ABOUT -->
         <section class="about-section" id="about">
             <div class="container">
@@ -98,7 +293,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- EVENTS -->
         <section class="about-section" id="events">
             <div class="container">
@@ -108,7 +303,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- TRAINING -->
         <section class="team-section" id="training">
             <div class="container">
@@ -118,7 +313,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- NEWS -->
         <section class="about-section" id="news">
             <div class="container">
@@ -128,7 +323,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- BOOK ONLINE -->
         <section class="team-section" id="book">
             <div class="container">
@@ -139,7 +334,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- TEAM -->
         <section class="team-section" id="team">
             <div class="container">
@@ -193,7 +388,7 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- TRANSPARENCY -->
         <section id="transparency" class="transparency-section">
             <div class="container">
@@ -210,9 +405,9 @@
                 </div>
             </div>
         </section>
-
+ 
     </main>
-
+ 
     <!-- CHATBOT -->
     <div class="bonchat-container">
         <button class="chat-toggle" onclick="toggleChat()">💬 Let's chat - BonChat?</button>
@@ -230,7 +425,54 @@
             </div>
         </div>
     </div>
-
+ 
+    <!-- ========== FLOATING DONATE BUTTON ========== -->
+    <button class="floating-donate" onclick="openDonate()">
+        ♥ Donate Now
+    </button>
+ 
+    <!-- ========== DONATE MODAL ========== -->
+    <div id="donateOverlay" onclick="closeDonateOutside(event)">
+        <div class="donate-modal">
+            <div class="donate-header">
+                <button class="donate-close" onclick="closeDonate()">✕</button>
+                <div class="heart-icon">❤️</div>
+                <h2>Make a Donation</h2>
+                <p>Your support empowers communities and transforms lives.</p>
+            </div>
+            <div class="donate-body">
+                <label>Select Amount</label>
+                <div class="amount-grid">
+                    <button class="amount-btn" onclick="selectAmount(this, '10')">$10</button>
+                    <button class="amount-btn" onclick="selectAmount(this, '25')">$25</button>
+                    <button class="amount-btn selected" onclick="selectAmount(this, '50')">$50</button>
+                    <button class="amount-btn" onclick="selectAmount(this, '100')">$100</button>
+                    <button class="amount-btn" onclick="selectAmount(this, '250')">$250</button>
+                    <button class="amount-btn" onclick="selectAmount(this, '500')">$500</button>
+                </div>
+ 
+                <label>Custom Amount (USD)</label>
+                <div class="donate-input-row">
+                    <span>$</span>
+                    <input type="number" id="donateAmount" placeholder="Enter amount" value="50" min="1">
+                </div>
+ 
+                <label>Your Name (optional)</label>
+                <div class="donate-name-row">
+                    <input type="text" id="donateName" placeholder="e.g. John Smith">
+                </div>
+ 
+                <button class="donate-submit-btn" onclick="submitDonation()">
+                    Donate Now →
+                </button>
+ 
+                <div id="donateSuccess">
+                    ✅ Thank you for your generous donation! We will be in touch soon.
+                </div>
+            </div>
+        </div>
+    </div>
+ 
     <!-- FOOTER -->
     <footer class="main-footer" id="contact">
         <div class="container footer-grid">
@@ -259,14 +501,12 @@
             </div>
         </div>
     </footer>
-
+ 
     <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal" style="display:none;">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-
-            <!-- TABS -->
-            <div style="display:flex; border-bottom:2px solid #e2e8f0; margin-bottom:24px;">
+             <div style="display:flex; border-bottom:2px solid #e2e8f0; margin-bottom:24px;">
                 <button id="tabLogin" onclick="showTab('login')"
                     style="flex:1; padding:12px; border:none; background:none; font-size:15px; font-weight:600; cursor:pointer; color:#0046ad; border-bottom:2px solid #0046ad; margin-bottom:-2px;">
                     Sign In
@@ -275,9 +515,7 @@
                     style="flex:1; padding:12px; border:none; background:none; font-size:15px; font-weight:600; cursor:pointer; color:#94a3b8; border-bottom:2px solid transparent; margin-bottom:-2px;">
                     Create Account
                 </button>
-            </div>
-
-            <!-- LOGIN FORM -->
+             </div>
             <form id="loginForm">
                 <h2 style="margin:0 0 6px; color:#002d72; font-size:22px;">Welcome Back</h2>
                 <p style="color:#666; font-size:14px; margin-bottom:20px;">Sign in to your account</p>
@@ -296,9 +534,7 @@
                     <a href="#" onclick="showTab('signup')" style="color:#0046ad; font-weight:600;">Create one</a>
                 </p>
             </form>
-
-            <!-- SIGN UP FORM -->
-            <form id="signupForm" style="display:none;">
+             <form id="signupForm" style="display:none;">
                 <h2 style="margin:0 0 6px; color:#002d72; font-size:22px;">Create Account</h2>
                 <p style="color:#666; font-size:14px; margin-bottom:20px;">Join UB Association today</p>
                 <div class="input-group">
@@ -326,14 +562,51 @@
                     Already have an account?
                     <a href="#" onclick="showTab('login')" style="color:#0046ad; font-weight:600;">Sign in</a>
                 </p>
-            </form>
-
+             </form>
         </div>
     </div>
-
+ 
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="static/script.js"></script>
-
+    <script>
+        // ========== DONATE MODAL FUNCTIONS ==========
+        window.openDonate = function() {
+            const overlay = document.getElementById('donateOverlay');
+            overlay.classList.add('active');
+            document.getElementById('donateSuccess').style.display = 'none';
+        };
+ 
+        window.closeDonate = function() {
+            document.getElementById('donateOverlay').classList.remove('active');
+        };
+ 
+        window.closeDonateOutside = function(e) {
+            if (e.target === document.getElementById('donateOverlay')) {
+                closeDonate();
+            }
+        };
+ 
+        window.selectAmount = function(btn, amount) {
+            document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            document.getElementById('donateAmount').value = amount;
+        };
+ 
+        window.submitDonation = function() {
+            const amount = document.getElementById('donateAmount').value;
+            const name   = document.getElementById('donateName').value;
+            if (!amount || amount < 1) {
+                alert('Please enter a valid donation amount.');
+                return;
+            }
+            // Here you would integrate with Stripe / PayPal etc.
+            document.getElementById('donateSuccess').style.display = 'block';
+            document.getElementById('donateAmount').value = '';
+            document.getElementById('donateName').value = '';
+            document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+        };
+    </script>
+ 
 </body>
-    </html>
+</html>
