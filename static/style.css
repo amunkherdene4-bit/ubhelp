@@ -1,8 +1,8 @@
 :root {
     --primary: #0047AB;
     /* Royal Blue */
-    --navy: #0f172a;
-    --dark: #1e293b;
+    --navy: #000000;
+    --dark: #000000;
     --light: #f8fafc;
     --white: #ffffff;
     --border: #e2e8f0;
@@ -1009,7 +1009,7 @@ html, body {
 /* Typography & Titles */
 .section-title {
     text-align: center;
-    color: #0d1b2a;
+    color: #000000;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 40px;

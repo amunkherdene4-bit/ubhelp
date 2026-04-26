@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UB Association | Strategic Workforce Development</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"  rel="stylesheet">
     <style>
         /* =============================================
            THEME VARIABLES
@@ -53,6 +52,32 @@
             transition: background 0.3s, color 0.3s;
         }
 
+        /* ---- LOGO ---- */
+        .logo a {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img-wrap {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #siteLogoImg {
+            display: none !important;
+        }
+
+        #logoPng {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
         body[data-fontsize="small"] {
             font-size: 13px;
         }
@@ -95,8 +120,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 15px;
-            position: relative;
+             padding: 0 15px;
         }
 
         .header-left {
@@ -150,11 +174,10 @@
             color: var(--primary);
         }
 
-        /* Desktop settings trigger — nav дотор */
+ 
         .settings-trigger {
             background: none;
-            border: none;
-            border-radius: 8px;
+             border: none;
             width: 36px;
             height: 36px;
             display: flex;
@@ -163,35 +186,18 @@
             cursor: pointer;
             margin-left: 8px;
             color: var(--text-muted);
-            transition: all 0.2s;
-            font-size: 16px;
-        }
-
-        .settings-trigger:hover {
-            background: var(--bg-page);
-            color: var(--primary);
-        }
-
-        /* Mobile settings trigger — navbar баруун буланд */
-        .mobile-settings-trigger {
-            display: none;
-            background: none;
-            border: none;
-            width: 36px;
-            height: 36px;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--text-muted);
+            transition: color 0.2s, transform 0.2s;
             font-size: 18px;
-            border-radius: 8px;
-            transition: all 0.2s;
+            border-radius: 50%;
+            padding: 0;
+            outline: none;
         }
 
-        .mobile-settings-trigger:hover {
-            background: var(--bg-page);
+         .settings-trigger:hover {
             color: var(--primary);
-        }
+            transform: rotate(30deg);
+            background: none;
+         }
 
         .btn-donate-header {
             background: #28a745 !important;
@@ -586,27 +592,48 @@
            HERO
         ============================================= */
         .hero {
-            padding: 60px 0;
-            background: var(--section-alt);
+            padding: 80px 0;
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.62), rgba(15, 23, 42, 0.62)),
+                url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80') center/cover no-repeat;
             text-align: center;
             transition: background 0.3s;
+        }
+
+        [data-theme="light"] .hero {
+            background:
+                linear-gradient(rgba(248, 250, 252, 0.82), rgba(248, 250, 252, 0.82)),
+                url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80') center/cover no-repeat;
+        }
+
+        .hero h1 {
+            color: var(--text-main);
         }
 
         .hero h1 {
             font-size: 28px;
             font-weight: 700;
-            margin: 25px 0 15px;
-            color: var(--text-main);
+             margin: 25px 0 15px;
             line-height: 1.2;
+            color: white;
+         }
+
+        [data-theme="light"] .hero h1 {
+            color: #1e293b;
         }
 
-        .hero p {
-            font-size: 15px;
-            color: var(--text-muted);
+       .hero p {
+ 
+        font-size: 15px;
             max-width: 750px;
             margin: 0 auto 30px;
             padding: 0 10px;
             text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        [data-theme="light"] .hero p {
+            color: #64748b;
         }
 
         .hero-btns {
@@ -757,7 +784,7 @@
         }
 
         .your-section-class {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('family.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1600&q=80');
             background-size: cover;
             background-position: center;
             padding: 80px 20px;
@@ -1281,44 +1308,11 @@
         /* =============================================
            RESPONSIVE
         ============================================= */
-        @media (max-width: 768px) {
-
-            /* Desktop nav нуух */
+         @media (max-width: 768px) {
             .desktop-nav {
                 display: none !important;
             }
-
-            /* Mobile: header голлуулах */
-            .header-content {
-                justify-content: center;
-                padding: 0 15px;
-            }
-
-            /* Header left голлуулах */
-            .header-left {
-                width: 100%;
-                justify-content: center;
-                gap: 0;
-            }
-
-            /* MENU товч зүүн буланд */
-            .menu-trigger {
-                position: absolute;
-                left: 15px;
-            }
-
-            /* Logo голд, томруулах */
-            .logo a img {
-                height: 75px !important;
-            }
-
-            /* Mobile settings товч баруун буланд */
-            .mobile-settings-trigger {
-                display: flex !important;
-                position: absolute;
-                right: 15px;
-            }
-
+ 
             .doc-grid {
                 grid-template-columns: 1fr;
             }
@@ -1410,28 +1404,20 @@
     <!-- HEADER -->
     <header class="navbar">
         <div class="container header-content">
-            <div class="header-left">
-                <!-- MENU товч: mobile дээр position:absolute зүүнд -->
-                <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
-                <!-- LOGO: mobile дээр голд -->
+             <div class="header-left">
+                 <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
                 <div class="logo">
                     <a href="#">
-                        <img src="static/Logo.jpg" alt="UB Association Logo"
-                            style="height:60px; vertical-align:middle; margin-right:10px;">
+                        <div class="logo-img-wrap"><img src="static/Logo.png" alt="UB Association Logo"
+                                id="siteLogoImg"><img id="logoPng" alt="UB Association Logo"></div>
                     </a>
                 </div>
             </div>
-
-            <!-- Mobile-д ЗӨВХӨН харагдах settings товч (баруун булан) -->
-            <button class="mobile-settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
-
-            <!-- Desktop navigation -->
-            <nav class="desktop-nav">
+             <nav class="desktop-nav">
                 <a href="#transparency">Transparency</a>
                 <a href="#partner">Partnerships</a>
                 <a href="#" class="login-trigger">Login</a>
-                <!-- Desktop settings: nav дотор нэг л товч -->
-                <button class="settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
+                 <button class="settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
                 <a href="#" class="btn-donate-header" onclick="openDonate(); return false;">Donate Now</a>
             </nav>
         </div>
@@ -1593,7 +1579,7 @@
     <!-- FLOATING DONATE -->
     <button class="floating-donate" onclick="openDonate()">♥ Donate Now</button>
 
-    <!-- SETTINGS PANEL -->
+    <!-- ========== SETTINGS PANEL ========== -->
     <div id="settingsOverlay" onclick="closeSettingsOutside(event)">
         <div class="settings-panel">
             <div class="settings-head">
@@ -1792,6 +1778,51 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="static/script.js"></script>
     <script>
+
+        // ============================================================
+        // LOGO PNG CONVERTER - JPG цагаан дэвсгэрийг арилгах
+        // Локал серверт ажиллана (file:// биш http://)
+        // ============================================================
+        (function () {
+            var img = document.getElementById('siteLogoImg');
+            var out = document.getElementById('logoPng');
+            if (!img || !out) return;
+
+            function convertLogo() {
+                var canvas = document.createElement('canvas');
+                canvas.width = img.naturalWidth || img.width || 300;
+                canvas.height = img.naturalHeight || img.height || 150;
+                var ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+
+                try {
+                    var d = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    var px = d.data;
+                    for (var i = 0; i < px.length; i += 4) {
+                        var r = px[i], g = px[i + 1], b = px[i + 2];
+                        // Near-white pixel → transparent
+                        if (r > 230 && g > 230 && b > 230) {
+                            var w = (Math.min(r, g, b) - 230) / 25; // 0..1
+                            px[i + 3] = Math.round(w * 255);
+                        }
+                    }
+                    ctx.putImageData(d, 0, 0);
+                    out.src = canvas.toDataURL('image/png');
+                } catch (e) {
+                    // CORS blocked (file:// protocol) → fallback: show original
+                    out.src = img.src;
+                }
+            }
+
+            if (img.complete && img.naturalWidth) {
+                convertLogo();
+            } else {
+                img.onload = convertLogo;
+            }
+        })();
+
+    </script>
+    <script>
         // ============================================================
         // SETTINGS
         // ============================================================
@@ -1888,6 +1919,7 @@
             document.getElementById('langSelect').value = 'en';
         }
 
+        // Load on page start
         window.addEventListener('DOMContentLoaded', loadSettings);
 
         // ============================================================
@@ -1916,6 +1948,8 @@
             document.getElementById('donateName').value = '';
             document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
         };
+
+
     </script>
 
 </body>
