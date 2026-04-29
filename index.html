@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UB Association | Strategic Workforce Development</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"  rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* =============================================
-           THEME VARIABLES
-        ============================================= */
-        :root {
+         :root {
             --primary: #0047AB;
             --navy: #0f172a;
             --radius: 12px;
@@ -20,7 +17,7 @@
             --bg-nav: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --border-color: #e2e8f0;
+            --border-color: #e2e8f0
             --section-alt: #f8fafc;
         }
 
@@ -52,32 +49,6 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        /* ---- LOGO ---- */
-        .logo a {
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-            padding: 0 !important;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-img-wrap {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        #siteLogoImg {
-            display: none !important;
-        }
-
-        #logoPng {
-            height: 60px;
-            width: auto;
-            display: block;
-        }
-
         body[data-fontsize="small"] {
             font-size: 13px;
         }
@@ -103,12 +74,38 @@
             box-sizing: border-box;
         }
 
+        /* ---- LOGO ---- */
+        .logo a {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img-wrap {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #siteLogoImg {
+            display: none !important;
+        }
+
+        #logoPng {
+            height: 60px;
+            width: auto;
+            display: block;
+      }
+ 
         /* =============================================
            NAVBAR
         ============================================= */
         .navbar {
             background: var(--bg-nav);
-            padding: 18px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -120,7 +117,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-             padding: 0 15px;
+            padding: 0 15px;
         }
 
         .header-left {
@@ -144,16 +141,7 @@
             padding: 5px 0;
             text-transform: uppercase;
         }
-
-        .logo a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-main);
-            border: none;
-        }
-
+ 
         .desktop-nav {
             display: flex;
             align-items: center;
@@ -174,10 +162,9 @@
             color: var(--primary);
         }
 
- 
         .settings-trigger {
             background: none;
-             border: none;
+            border: none;
             width: 36px;
             height: 36px;
             display: flex;
@@ -193,11 +180,15 @@
             outline: none;
         }
 
-         .settings-trigger:hover {
+        .settings-trigger:hover {
             color: var(--primary);
             transform: rotate(30deg);
-            background: none;
-         }
+        }
+
+        /* Mobile settings button - always hidden on desktop */
+        .mobile-settings-btn {
+            display: none;
+        }
 
         .btn-donate-header {
             background: #28a745 !important;
@@ -605,26 +596,21 @@
                 linear-gradient(rgba(248, 250, 252, 0.82), rgba(248, 250, 252, 0.82)),
                 url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80') center/cover no-repeat;
         }
-
-        .hero h1 {
-            color: var(--text-main);
-        }
-
+ 
         .hero h1 {
             font-size: 28px;
             font-weight: 700;
-             margin: 25px 0 15px;
+            margin: 25px 0 15px;
             line-height: 1.2;
             color: white;
-         }
+        }
 
         [data-theme="light"] .hero h1 {
             color: #1e293b;
         }
 
-       .hero p {
- 
-        font-size: 15px;
+        .hero p {
+            font-size: 15px;
             max-width: 750px;
             margin: 0 auto 30px;
             padding: 0 10px;
@@ -643,19 +629,32 @@
         }
 
         .btn-secondary {
-            border: 1px solid var(--border-color);
-            padding: 18px 36px;
+            border: none;
+            padding: 16px 36px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            color: var(--text-main);
+            font-weight: 700;
+            color: white;
             display: inline-block;
-            transition: all 0.2s;
+            transition: all 0.25s;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(6px);
         }
 
         .btn-secondary:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+            background: rgba(255, 255, 255, 0.32);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        [data-theme="light"] .btn-secondary {
+            background: rgba(30, 41, 59, 0.12);
+            color: #1e293b;
+        }
+
+        [data-theme="light"] .btn-secondary:hover {
+            background: rgba(30, 41, 59, 0.22);
+            color: #1e293b;
         }
 
         /* =============================================
@@ -1306,19 +1305,78 @@
         }
 
         /* =============================================
-           RESPONSIVE
+           RESPONSIVE - MOBILE
         ============================================= */
-         @media (max-width: 768px) {
+        @media (max-width: 768px) {
+
+            /* Desktop nav нуух */
             .desktop-nav {
                 display: none !important;
             }
- 
+
+            /* Header: MENU зүүн | ЛОГО голд | ⚙️ баруун */
+            .header-content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 15px;
+                min-height: 75px;
+            }
+
+            .header-left {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+            }
+
+            .menu-trigger {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            /* Mobile settings - баруун буланд */
+            .mobile-settings-btn {
+                display: flex !important;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                color: var(--text-muted);
+                width: 38px;
+                height: 38px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                outline: none;
+                transition: color 0.2s, transform 0.3s;
+                border-radius: 50%;
+            }
+
+            .mobile-settings-btn:hover {
+                color: var(--primary);
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            /* Лого голчлон томруулах */
+            #logoPng {
+                height: 58px !important;
+            }
+
             .doc-grid {
                 grid-template-columns: 1fr;
             }
 
             .hero h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             .hero-btns {
@@ -1378,6 +1436,14 @@
                 padding: 0 20px;
                 box-sizing: border-box;
             }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .your-section-class h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -1404,22 +1470,27 @@
     <!-- HEADER -->
     <header class="navbar">
         <div class="container header-content">
-             <div class="header-left">
-                 <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
+            <div class="header-left">
+                <button class="menu-trigger" onclick="openNav()">&#9776; MENU</button>
                 <div class="logo">
                     <a href="#">
-                        <div class="logo-img-wrap"><img src="static/Logo.png" alt="UB Association Logo"
-                                id="siteLogoImg"><img id="logoPng" alt="UB Association Logo"></div>
+                        <div class="logo-img-wrap">
+                            <img src="static/Logo.png" alt="UB Association Logo" id="siteLogoImg">
+                            <img id="logoPng" alt="UB Association Logo">
+                        </div>
                     </a>
                 </div>
             </div>
-             <nav class="desktop-nav">
+            <!-- Desktop nav -->
+            <nav class="desktop-nav">
                 <a href="#transparency">Transparency</a>
                 <a href="#partner">Partnerships</a>
                 <a href="#" class="login-trigger">Login</a>
-                 <button class="settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
+                <button class="settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
                 <a href="#" class="btn-donate-header" onclick="openDonate(); return false;">Donate Now</a>
             </nav>
+            <!-- Mobile: Settings товч баруун буланд -->
+            <button class="mobile-settings-btn" onclick="openSettings()" title="Settings">⚙️</button>
         </div>
     </header>
 
@@ -1579,19 +1650,17 @@
     <!-- FLOATING DONATE -->
     <button class="floating-donate" onclick="openDonate()">♥ Donate Now</button>
 
-    <!-- ========== SETTINGS PANEL ========== -->
+    <!-- SETTINGS PANEL -->
     <div id="settingsOverlay" onclick="closeSettingsOutside(event)">
         <div class="settings-panel">
             <div class="settings-head">
                 <h3>⚙️ Settings</h3>
                 <button class="settings-close" onclick="closeSettings()">✕</button>
             </div>
-            <div class="settings-body">
-
+             <div class="settings-body">
                 <div class="settings-group">
                     <div class="settings-group-title">Appearance</div>
-
-                    <div style="margin-bottom:14px;">
+                     <div style="margin-bottom:14px;">
                         <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Theme
                         </div>
                         <div class="theme-selector">
@@ -1605,8 +1674,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div style="margin-bottom:14px;">
+                     <div style="margin-bottom:14px;">
                         <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Font
                             Size</div>
                         <div class="font-size-selector">
@@ -1619,13 +1687,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="settings-divider"></div>
-
-                <div class="settings-group">
+                 <div class="settings-divider"></div>
+                 <div class="settings-group">
                     <div class="settings-group-title">Accessibility</div>
-
-                    <div class="setting-row">
+                     <div class="setting-row">
                         <div class="setting-row-left">
                             <div class="setting-icon">✨</div>
                             <div>
@@ -1636,8 +1701,7 @@
                         <label class="toggle"><input type="checkbox" id="toggleAnimations" checked
                                 onchange="applyAnimations(this)"><span class="toggle-slider"></span></label>
                     </div>
-
-                    <div class="setting-row">
+                     <div class="setting-row">
                         <div class="setting-row-left">
                             <div class="setting-icon">🔔</div>
                             <div>
@@ -1648,8 +1712,7 @@
                         <label class="toggle"><input type="checkbox" id="toggleNotif" checked
                                 onchange="saveSettings()"><span class="toggle-slider"></span></label>
                     </div>
-
-                    <div class="setting-row">
+                     <div class="setting-row">
                         <div class="setting-row-left">
                             <div class="setting-icon">💬</div>
                             <div>
@@ -1660,8 +1723,7 @@
                         <label class="toggle"><input type="checkbox" id="toggleChatWidget" checked
                                 onchange="applyChatWidget(this)"><span class="toggle-slider"></span></label>
                     </div>
-
-                    <div class="setting-row">
+                     <div class="setting-row">
                         <div class="setting-row-left">
                             <div class="setting-icon">📌</div>
                             <div>
@@ -1672,11 +1734,9 @@
                         <label class="toggle"><input type="checkbox" id="toggleSticky" checked
                                 onchange="applyStickyHeader(this)"><span class="toggle-slider"></span></label>
                     </div>
-                </div>
-
+                 </div>
                 <div class="settings-divider"></div>
-
-                <div class="settings-group">
+                 <div class="settings-group">
                     <div class="settings-group-title">Language</div>
                     <select class="lang-select" id="langSelect" onchange="saveSettings()">
                         <option value="en">🇺🇸 English</option>
@@ -1687,8 +1747,7 @@
                         <option value="ru">🇷🇺 Русский</option>
                     </select>
                 </div>
-
-                <button class="settings-reset" onclick="resetSettings()">↺ Reset to Defaults</button>
+                 <button class="settings-reset" onclick="resetSettings()">↺ Reset to Defaults</button>
             </div>
         </div>
     </div>
@@ -1778,95 +1837,55 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="static/script.js"></script>
     <script>
-
-        // ============================================================
-        // LOGO PNG CONVERTER - JPG цагаан дэвсгэрийг арилгах
-        // Локал серверт ажиллана (file:// биш http://)
-        // ============================================================
+        // LOGO PNG CONVERTER
         (function () {
             var img = document.getElementById('siteLogoImg');
             var out = document.getElementById('logoPng');
-            if (!img || !out) return;
-
+             if (!img || !out) return;
             function convertLogo() {
                 var canvas = document.createElement('canvas');
-                canvas.width = img.naturalWidth || img.width || 300;
-                canvas.height = img.naturalHeight || img.height || 150;
+                canvas.width = img.naturalWidth || 300;
+                canvas.height = img.naturalHeight || 150;
                 var ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0);
-
-                try {
+                 try {
                     var d = ctx.getImageData(0, 0, canvas.width, canvas.height);
                     var px = d.data;
                     for (var i = 0; i < px.length; i += 4) {
                         var r = px[i], g = px[i + 1], b = px[i + 2];
-                        // Near-white pixel → transparent
-                        if (r > 230 && g > 230 && b > 230) {
-                            var w = (Math.min(r, g, b) - 230) / 25; // 0..1
+                         if (r > 230 && g > 230 && b > 230) {
+                            var w = (Math.min(r, g, b) - 230) / 25;
                             px[i + 3] = Math.round(w * 255);
                         }
                     }
                     ctx.putImageData(d, 0, 0);
                     out.src = canvas.toDataURL('image/png');
                 } catch (e) {
-                    // CORS blocked (file:// protocol) → fallback: show original
-                    out.src = img.src;
+                     out.src = img.src;
                 }
             }
-
-            if (img.complete && img.naturalWidth) {
-                convertLogo();
-            } else {
-                img.onload = convertLogo;
-            }
+            if (img.complete && img.naturalWidth) { convertLogo(); }
+            else { img.onload = convertLogo; }
         })();
 
-    </script>
-    <script>
-        // ============================================================
-        // SETTINGS
-        // ============================================================
-        function openSettings() {
-            document.getElementById('settingsOverlay').classList.add('active');
-            loadSettings();
-        }
-        function closeSettings() {
-            document.getElementById('settingsOverlay').classList.remove('active');
-        }
-        function closeSettingsOutside(e) {
-            if (e.target === document.getElementById('settingsOverlay')) closeSettings();
-        }
-
+         // SETTINGS
+        function openSettings() { document.getElementById('settingsOverlay').classList.add('active'); loadSettings(); }
+        function closeSettings() { document.getElementById('settingsOverlay').classList.remove('active'); }
+        function closeSettingsOutside(e) { if (e.target === document.getElementById('settingsOverlay')) closeSettings(); }
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             document.getElementById('themeLight').classList.toggle('active', theme === 'light');
             document.getElementById('themeDark').classList.toggle('active', theme === 'dark');
             saveSettings();
-        }
-
+         }
         function setFontSize(size) {
             document.body.setAttribute('data-fontsize', size);
-            ['Small', 'Medium', 'Large'].forEach(s =>
-                document.getElementById('font' + s).classList.toggle('active', s.toLowerCase() === size)
-            );
+            ['Small', 'Medium', 'Large'].forEach(s => document.getElementById('font' + s).classList.toggle('active', s.toLowerCase() === size));
             saveSettings();
         }
-
-        function applyAnimations(cb) {
-            document.body.setAttribute('data-animations', cb.checked ? 'on' : 'off');
-            saveSettings();
-        }
-
-        function applyChatWidget(cb) {
-            document.querySelector('.bonchat-container').style.display = cb.checked ? 'block' : 'none';
-            saveSettings();
-        }
-
-        function applyStickyHeader(cb) {
-            document.querySelector('.navbar').style.position = cb.checked ? 'sticky' : 'relative';
-            saveSettings();
-        }
-
+        function applyAnimations(cb) { document.body.setAttribute('data-animations', cb.checked ? 'on' : 'off'); saveSettings(); }
+        function applyChatWidget(cb) { document.querySelector('.bonchat-container').style.display = cb.checked ? 'block' : 'none'; saveSettings(); }
+        function applyStickyHeader(cb) { document.querySelector('.navbar').style.position = cb.checked ? 'sticky' : 'relative'; saveSettings(); }
         function saveSettings() {
             const s = {
                 theme: document.documentElement.getAttribute('data-theme'),
@@ -1879,67 +1898,38 @@
             };
             try { localStorage.setItem('uba_settings', JSON.stringify(s)); } catch (e) { }
         }
-
-        function loadSettings() {
+         function loadSettings() {
             try {
                 const raw = localStorage.getItem('uba_settings');
                 if (!raw) return;
                 const s = JSON.parse(raw);
                 if (s.theme) setTheme(s.theme);
                 if (s.fontSize) setFontSize(s.fontSize);
-                if (typeof s.animations !== 'undefined') {
-                    document.getElementById('toggleAnimations').checked = s.animations;
-                    applyAnimations(document.getElementById('toggleAnimations'));
-                }
-                if (typeof s.notif !== 'undefined')
-                    document.getElementById('toggleNotif').checked = s.notif;
-                if (typeof s.chat !== 'undefined') {
-                    document.getElementById('toggleChatWidget').checked = s.chat;
-                    applyChatWidget(document.getElementById('toggleChatWidget'));
-                }
-                if (typeof s.sticky !== 'undefined') {
-                    document.getElementById('toggleSticky').checked = s.sticky;
-                    applyStickyHeader(document.getElementById('toggleSticky'));
-                }
+                if (typeof s.animations !== 'undefined') { document.getElementById('toggleAnimations').checked = s.animations; applyAnimations(document.getElementById('toggleAnimations')); }
+                if (typeof s.notif !== 'undefined') document.getElementById('toggleNotif').checked = s.notif;
+                if (typeof s.chat !== 'undefined') { document.getElementById('toggleChatWidget').checked = s.chat; applyChatWidget(document.getElementById('toggleChatWidget')); }
+                if (typeof s.sticky !== 'undefined') { document.getElementById('toggleSticky').checked = s.sticky; applyStickyHeader(document.getElementById('toggleSticky')); }
                 if (s.lang) document.getElementById('langSelect').value = s.lang;
             } catch (e) { }
         }
-
-        function resetSettings() {
+         function resetSettings() {
             try { localStorage.removeItem('uba_settings'); } catch (e) { }
-            setTheme('light');
-            setFontSize('medium');
-            const anim = document.getElementById('toggleAnimations');
-            anim.checked = true; applyAnimations(anim);
+            setTheme('light'); setFontSize('medium');
+            const anim = document.getElementById('toggleAnimations'); anim.checked = true; applyAnimations(anim);
             document.getElementById('toggleNotif').checked = true;
-            const chat = document.getElementById('toggleChatWidget');
-            chat.checked = true; applyChatWidget(chat);
-            const sticky = document.getElementById('toggleSticky');
-            sticky.checked = true; applyStickyHeader(sticky);
+            const chat = document.getElementById('toggleChatWidget'); chat.checked = true; applyChatWidget(chat);
+            const sticky = document.getElementById('toggleSticky'); sticky.checked = true; applyStickyHeader(sticky);
             document.getElementById('langSelect').value = 'en';
         }
 
-        // Load on page start
-        window.addEventListener('DOMContentLoaded', loadSettings);
+         window.addEventListener('DOMContentLoaded', loadSettings);
 
-        // ============================================================
+
         // DONATE
-        // ============================================================
-        window.openDonate = function () {
-            document.getElementById('donateOverlay').classList.add('active');
-            document.getElementById('donateSuccess').style.display = 'none';
-        };
-        window.closeDonate = function () {
-            document.getElementById('donateOverlay').classList.remove('active');
-        };
-        window.closeDonateOutside = function (e) {
-            if (e.target === document.getElementById('donateOverlay')) closeDonate();
-        };
-        window.selectAmount = function (btn, amount) {
-            document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-            document.getElementById('donateAmount').value = amount;
-        };
+        window.openDonate = function () { document.getElementById('donateOverlay').classList.add('active'); document.getElementById('donateSuccess').style.display = 'none'; };
+        window.closeDonate = function () { document.getElementById('donateOverlay').classList.remove('active'); };
+        window.closeDonateOutside = function (e) { if (e.target === document.getElementById('donateOverlay')) closeDonate(); };
+        window.selectAmount = function (btn, amount) { document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected')); btn.classList.add('selected'); document.getElementById('donateAmount').value = amount; };
         window.submitDonation = function () {
             const amount = document.getElementById('donateAmount').value;
             if (!amount || amount < 1) { alert('Please enter a valid amount.'); return; }
@@ -1948,8 +1938,7 @@
             document.getElementById('donateName').value = '';
             document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
         };
-
-
+   
     </script>
 
 </body>
