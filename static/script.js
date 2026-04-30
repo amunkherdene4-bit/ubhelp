@@ -226,4 +226,26 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'Enter') sendMessage();
     };
 
+     // ============================================================
+     // CONTACT FORM
+    // ============================================================
+    window.submitContactForm = function () {
+        const nameEl    = document.querySelector('#contact input[type="text"]');
+        const emailEl   = document.querySelector('#contact input[type="email"]');
+        const subjectEl = document.querySelector('#contact select');
+        const msgEl     = document.querySelector('#contact textarea');
+
+        if (!nameEl.value.trim() || !emailEl.value.trim() || !msgEl.value.trim()) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        alert('Thank you, ' + nameEl.value.trim() + '! We will get back to you within 1–2 business days.');
+
+        nameEl.value    = '';
+        emailEl.value   = '';
+        subjectEl.value = '';
+        msgEl.value     = '';
+    };
+
 });
