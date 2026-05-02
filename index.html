@@ -17,7 +17,8 @@
             --bg-nav: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --border-color: #e2e8f0 --section-alt: #f8fafc;
+            --border-color: #e2e8f0;
+            --section-alt: #f8fafc;
         }
 
         [data-theme="dark"] {
@@ -30,8 +31,7 @@
             --section-alt: #1e293b;
         }
 
-        html,
-        body {
+        html, body {
             height: auto;
             min-height: 100%;
             overflow-x: hidden;
@@ -48,22 +48,10 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        body[data-fontsize="small"] {
-            font-size: 13px;
-        }
-
-        body[data-fontsize="medium"] {
-            font-size: 15px;
-        }
-
-        body[data-fontsize="large"] {
-            font-size: 17px;
-        }
-
-        body[data-animations="off"] * {
-            transition: none !important;
-            animation: none !important;
-        }
+        body[data-fontsize="small"] { font-size: 13px; }
+        body[data-fontsize="medium"] { font-size: 15px; }
+        body[data-fontsize="large"] { font-size: 17px; }
+        body[data-animations="off"] * { transition: none !important; animation: none !important; }
 
         .container {
             width: 100%;
@@ -83,21 +71,9 @@
             align-items: center;
             text-decoration: none;
         }
-
-        .logo-img-wrap {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        #siteLogoImg {
-            display: none !important;
-        }
-
-        #logoPng {
-            height: 60px;
-            width: auto;
-            display: block;
-        }
+        .logo-img-wrap { display: inline-flex; align-items: center; }
+        #siteLogoImg { display: none !important; }
+        #logoPng { height: 60px; width: auto; display: block; }
 
         /* =============================================
            NAVBAR
@@ -157,9 +133,7 @@
             transition: color 0.2s;
         }
 
-        .desktop-nav a:hover {
-            color: var(--primary);
-        }
+        .desktop-nav a:hover { color: var(--primary); }
 
         .settings-trigger {
             background: none;
@@ -184,10 +158,7 @@
             transform: rotate(30deg);
         }
 
-        /* Mobile settings button - always hidden on desktop */
-        .mobile-settings-btn {
-            display: none;
-        }
+        .mobile-settings-btn { display: none; }
 
         .btn-donate-header {
             background: #28a745 !important;
@@ -205,9 +176,7 @@
             white-space: nowrap;
         }
 
-        .btn-donate-header:hover {
-            background: #218838 !important;
-        }
+        .btn-donate-header:hover { background: #218838 !important; }
 
         .login-trigger {
             background-color: #0046ad;
@@ -225,9 +194,7 @@
             white-space: nowrap;
         }
 
-        .login-trigger:hover {
-            background-color: #00358a;
-        }
+        .login-trigger:hover { background-color: #00358a; }
 
         /* =============================================
            SIDEBAR
@@ -245,9 +212,7 @@
             padding-top: 60px;
         }
 
-        [data-theme="dark"] .sidenav {
-            background-color: #020617;
-        }
+        [data-theme="dark"] .sidenav { background-color: #020617; }
 
         .sidenav-links a {
             padding: 15px 40px;
@@ -297,9 +262,7 @@
             justify-content: center;
         }
 
-        #settingsOverlay.active {
-            display: flex;
-        }
+        #settingsOverlay.active { display: flex; }
 
         .settings-panel {
             background: var(--bg-card);
@@ -347,17 +310,10 @@
             transition: background 0.2s;
         }
 
-        .settings-close:hover {
-            background: var(--bg-page);
-        }
+        .settings-close:hover { background: var(--bg-page); }
 
-        .settings-body {
-            padding: 24px 28px;
-        }
-
-        .settings-group {
-            margin-bottom: 28px;
-        }
+        .settings-body { padding: 24px 28px; }
+        .settings-group { margin-bottom: 28px; }
 
         .settings-group-title {
             font-size: 11px;
@@ -385,23 +341,9 @@
             gap: 12px;
         }
 
-        .setting-icon {
-            font-size: 18px;
-            width: 32px;
-            text-align: center;
-        }
-
-        .setting-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 2px;
-        }
-
-        .setting-desc {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
+        .setting-icon { font-size: 18px; width: 32px; text-align: center; }
+        .setting-label { font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 2px; }
+        .setting-desc { font-size: 12px; color: var(--text-muted); }
 
         .toggle {
             position: relative;
@@ -410,11 +352,7 @@
             flex-shrink: 0;
         }
 
-        .toggle input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+        .toggle input { opacity: 0; width: 0; height: 0; }
 
         .toggle-slider {
             position: absolute;
@@ -438,13 +376,8 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
-        .toggle input:checked+.toggle-slider {
-            background: var(--primary);
-        }
-
-        .toggle input:checked+.toggle-slider:before {
-            transform: translateX(20px);
-        }
+        .toggle input:checked + .toggle-slider { background: var(--primary); }
+        .toggle input:checked + .toggle-slider:before { transform: translateX(20px); }
 
         .theme-selector {
             display: grid;
@@ -463,18 +396,14 @@
             background: var(--bg-page);
         }
 
-        .theme-option:hover {
-            border-color: var(--primary);
-        }
+        .theme-option:hover { border-color: var(--primary); }
 
         .theme-option.active {
             border-color: var(--primary);
             background: #eff6ff;
         }
 
-        [data-theme="dark"] .theme-option.active {
-            background: #1e3a5f;
-        }
+        [data-theme="dark"] .theme-option.active { background: #1e3a5f; }
 
         .theme-preview {
             width: 100%;
@@ -484,24 +413,11 @@
             border: 1px solid var(--border-color);
         }
 
-        .theme-preview-light {
-            background: linear-gradient(135deg, #ffffff 50%, #f8fafc 50%);
-        }
+        .theme-preview-light { background: linear-gradient(135deg, #ffffff 50%, #f8fafc 50%); }
+        .theme-preview-dark { background: linear-gradient(135deg, #0f172a 50%, #1e293b 50%); }
+        .theme-option span { font-size: 13px; font-weight: 600; color: var(--text-main); }
 
-        .theme-preview-dark {
-            background: linear-gradient(135deg, #0f172a 50%, #1e293b 50%);
-        }
-
-        .theme-option span {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .font-size-selector {
-            display: flex;
-            gap: 8px;
-        }
+        .font-size-selector { display: flex; gap: 8px; }
 
         .font-opt {
             flex: 1;
@@ -516,9 +432,7 @@
             transition: all 0.2s;
         }
 
-        .font-opt:hover {
-            border-color: var(--primary);
-        }
+        .font-opt:hover { border-color: var(--primary); }
 
         .font-opt.active {
             border-color: var(--primary);
@@ -526,9 +440,7 @@
             color: var(--primary);
         }
 
-        [data-theme="dark"] .font-opt.active {
-            background: #1e3a5f;
-        }
+        [data-theme="dark"] .font-opt.active { background: #1e3a5f; }
 
         .lang-select {
             width: 100%;
@@ -548,9 +460,7 @@
             background-position: right 12px center;
         }
 
-        .lang-select:focus {
-            border-color: var(--primary);
-        }
+        .lang-select:focus { border-color: var(--primary); }
 
         .settings-divider {
             height: 1px;
@@ -604,9 +514,7 @@
             color: white;
         }
 
-        [data-theme="light"] .hero h1 {
-            color: #1e293b;
-        }
+        [data-theme="light"] .hero h1 { color: #1e293b; }
 
         .hero p {
             font-size: 15px;
@@ -617,9 +525,7 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
-        [data-theme="light"] .hero p {
-            color: #64748b;
-        }
+        [data-theme="light"] .hero p { color: #64748b; }
 
         .hero-btns {
             display: flex;
@@ -682,9 +588,7 @@
             font-size: 1.1rem;
         }
 
-        .about-content p {
-            margin-bottom: 25px;
-        }
+        .about-content p { margin-bottom: 25px; }
 
         .btn-join {
             display: inline-block;
@@ -698,9 +602,7 @@
             transition: background 0.3s;
         }
 
-        .btn-join:hover {
-            background-color: #003d7a;
-        }
+        .btn-join:hover { background-color: #003d7a; }
 
         .team-section {
             padding: 100px 0;
@@ -733,11 +635,7 @@
             margin-bottom: 20px;
         }
 
-        .team-card h3 {
-            font-size: 1.25rem;
-            color: var(--text-main);
-            margin-bottom: 8px;
-        }
+        .team-card h3 { font-size: 1.25rem; color: var(--text-main); margin-bottom: 8px; }
 
         .role {
             font-size: 0.85rem;
@@ -769,11 +667,7 @@
             margin-bottom: 20px;
         }
 
-        .avatar-placeholder svg {
-            width: 80px;
-            height: 80px;
-            opacity: 0.4;
-        }
+        .avatar-placeholder svg { width: 80px; height: 80px; opacity: 0.4; }
 
         .transparency-section {
             padding: 100px 0;
@@ -791,14 +685,8 @@
             border-radius: 8px;
         }
 
-        .your-section-class h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .your-section-class p {
-            font-size: 1.2rem;
-        }
+        .your-section-class h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .your-section-class p { font-size: 1.2rem; }
 
         .doc-grid {
             display: grid;
@@ -822,14 +710,8 @@
             border-color: var(--primary);
         }
 
-        .doc-card h3 {
-            margin-bottom: 15px;
-            color: var(--text-main);
-        }
-
-        .doc-card p {
-            color: var(--text-muted);
-        }
+        .doc-card h3 { margin-bottom: 15px; color: var(--text-main); }
+        .doc-card p { color: var(--text-muted); }
 
         .doc-card .link {
             color: var(--primary);
@@ -837,6 +719,121 @@
             font-weight: 700;
             font-size: 14px;
         }
+
+        /* =============================================
+           CONTACT SECTION
+        ============================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .contact-card-title {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 0 0 20px;
+        }
+
+        .contact-info-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background: #eff6ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+
+        [data-theme="dark"] .contact-icon { background: #1e3a5f; }
+
+        .contact-info-row p { margin: 0; }
+
+        .contact-form-row2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-page);
+            color: var(--text-main);
+            font-size: 13px;
+            box-sizing: border-box;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .contact-input:focus { border-color: var(--primary); }
+
+        .contact-select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-page);
+            color: var(--text-main);
+            font-size: 13px;
+            margin-bottom: 10px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .contact-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-page);
+            color: var(--text-main);
+            font-size: 13px;
+            height: 100px;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .contact-submit {
+            background: #0047AB;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .contact-submit:hover { background: #003d8a; }
 
         /* =============================================
            CHATBOT
@@ -989,9 +986,7 @@
             justify-content: center;
         }
 
-        #donateOverlay.active {
-            display: flex;
-        }
+        #donateOverlay.active { display: flex; }
 
         .donate-modal {
             background: var(--bg-card);
@@ -1010,25 +1005,11 @@
             color: white;
         }
 
-        .donate-header .heart-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+        .donate-header .heart-icon { font-size: 40px; margin-bottom: 10px; }
+        .donate-header h2 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+        .donate-header p { font-size: 14px; opacity: 0.85; }
 
-        .donate-header h2 {
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .donate-header p {
-            font-size: 14px;
-            opacity: 0.85;
-        }
-
-        .donate-body {
-            padding: 32px 40px 36px;
-        }
+        .donate-body { padding: 32px 40px 36px; }
 
         .donate-body label {
             display: block;
@@ -1057,8 +1038,7 @@
             transition: all 0.2s;
         }
 
-        .amount-btn:hover,
-        .amount-btn.selected {
+        .amount-btn:hover, .amount-btn.selected {
             border-color: #0047AB;
             background: #EFF6FF;
             color: #0047AB;
@@ -1092,9 +1072,7 @@
             background: transparent;
         }
 
-        .donate-name-row {
-            margin-bottom: 20px;
-        }
+        .donate-name-row { margin-bottom: 20px; }
 
         .donate-name-row input {
             width: 100%;
@@ -1121,9 +1099,7 @@
             transition: background 0.3s;
         }
 
-        .donate-submit-btn:hover {
-            background: #218838;
-        }
+        .donate-submit-btn:hover { background: #218838; }
 
         #donateSuccess {
             display: none;
@@ -1165,9 +1141,7 @@
             transition: background 0.3s;
         }
 
-        [data-theme="dark"] .main-footer {
-            background: #020617;
-        }
+        [data-theme="dark"] .main-footer { background: #020617; }
 
         .footer-grid {
             display: grid;
@@ -1176,15 +1150,8 @@
             padding-bottom: 60px;
         }
 
-        .logo-footer {
-            font-size: 26px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .logo-footer b {
-            color: #3b82f6;
-        }
+        .logo-footer { font-size: 26px; color: white; margin-bottom: 20px; }
+        .logo-footer b { color: #3b82f6; }
 
         .tax-info {
             font-size: 13px;
@@ -1194,18 +1161,9 @@
             gap: 4px;
         }
 
-        .main-footer h4 {
-            color: white;
-            margin-bottom: 25px;
-        }
-
-        .main-footer ul {
-            list-style: none;
-        }
-
-        .main-footer ul li {
-            margin-bottom: 12px;
-        }
+        .main-footer h4 { color: white; margin-bottom: 25px; }
+        .main-footer ul { list-style: none; }
+        .main-footer ul li { margin-bottom: 12px; }
 
         .main-footer ul li a {
             color: #94a3b8;
@@ -1214,9 +1172,7 @@
             transition: 0.3s;
         }
 
-        .main-footer ul li a:hover {
-            color: white;
-        }
+        .main-footer ul li a:hover { color: white; }
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1256,10 +1212,7 @@
             color: var(--text-main);
         }
 
-        .input-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
+        .input-group { margin-bottom: 15px; text-align: left; }
 
         .input-group label {
             display: block;
@@ -1299,22 +1252,16 @@
             transition: background 0.3s;
         }
 
-        .submit-btn:hover {
-            background: #00358a;
-        }
+        .submit-btn:hover { background: #00358a; }
 
         /* =============================================
            RESPONSIVE - MOBILE
         ============================================= */
         @media (max-width: 768px) {
 
-            /* Desktop nav нуух */
-            .desktop-nav {
-                display: none !important;
-            }
+            .desktop-nav { display: none !important; }
 
-            /* Header: MENU зүүн | ЛОГО голд | ⚙️ баруун */
-            .header-content {
+             .header-content {
                 position: relative;
                 display: flex;
                 align-items: center;
@@ -1337,8 +1284,7 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
-
-            /* Mobile settings - баруун буланд */
+ 
             .mobile-settings-btn {
                 display: flex !important;
                 position: absolute;
@@ -1365,18 +1311,11 @@
                 transform: translateY(-50%) rotate(45deg);
             }
 
-            /* Лого голчлон томруулах */
-            #logoPng {
-                height: 58px !important;
-            }
+            #logoPng { height: 58px !important; }
 
-            .doc-grid {
-                grid-template-columns: 1fr;
-            }
+            .doc-grid { grid-template-columns: 1fr; }
 
-            .hero h1 {
-                font-size: 22px;
-            }
+            .hero h1 { font-size: 22px; }
 
             .hero-btns {
                 flex-direction: column;
@@ -1390,13 +1329,8 @@
                 text-align: center;
             }
 
-            .logo-footer {
-                margin: 0 auto 20px;
-            }
-
-            .tax-info {
-                align-items: center;
-            }
+            .logo-footer { margin: 0 auto 20px; }
+            .tax-info { align-items: center; }
 
             .chat-ui {
                 width: 85vw;
@@ -1404,15 +1338,8 @@
                 bottom: 60px;
             }
 
-            .chat-msgs {
-                height: 250px;
-                padding: 10px;
-            }
-
-            .chat-toggle {
-                padding: 10px 18px;
-                font-size: 13px;
-            }
+            .chat-msgs { height: 250px; padding: 10px; }
+            .chat-toggle { padding: 10px 18px; font-size: 13px; }
 
             .floating-donate {
                 bottom: 90px;
@@ -1421,9 +1348,7 @@
                 font-size: 14px;
             }
 
-            .settings-panel {
-                width: 95vw;
-            }
+            .settings-panel { width: 95vw; }
 
             .team-grid {
                 flex-direction: column;
@@ -1436,13 +1361,14 @@
                 box-sizing: border-box;
             }
 
-            .section-title {
-                font-size: 1.8rem;
-            }
+            .section-title { font-size: 1.8rem; }
+            .your-section-class h2 { font-size: 1.8rem; }
 
-            .your-section-class h2 {
-                font-size: 1.8rem;
-            }
+            /* Contact grid — нэг баганаар */
+            .contact-grid { grid-template-columns: 1fr; }
+
+            /* Contact form дотор хоёр баганыг нэг болгох */
+            .contact-form-row2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1461,7 +1387,7 @@
             <a href="#book" onclick="closeNav()">Book Online</a>
             <a href="#contact" onclick="closeNav()">Contact Us</a>
             <a href="#" class="login-trigger">Login</a>
-            <a href="#" class="side-settings" onclick="closeNav(); openSettings();">⚙️ Settings</a>
+            <a href="#" class="side-settings" onclick="closeNav(); openSettings();">&#9881;&#65039; Settings</a>
             <a href="#" class="side-donate" onclick="closeNav(); openDonate();">Donate Now</a>
         </div>
     </div>
@@ -1479,78 +1405,73 @@
                         </div>
                     </a>
                 </div>
-            </div>
-            <!-- Desktop nav -->
+             </div>
             <nav class="desktop-nav">
                 <a href="#transparency">Transparency</a>
                 <a href="#partner">Partnerships</a>
                 <a href="#" class="login-trigger">Login</a>
-                <button class="settings-trigger" onclick="openSettings()" title="Settings">⚙️</button>
+                <button class="settings-trigger" onclick="openSettings()" title="Settings">&#9881;&#65039;</button>
                 <a href="#" class="btn-donate-header" onclick="openDonate(); return false;">Donate Now</a>
             </nav>
-            <!-- Mobile: Settings товч баруун буланд -->
-            <button class="mobile-settings-btn" onclick="openSettings()" title="Settings">⚙️</button>
+            <button class="mobile-settings-btn" onclick="openSettings()" title="Settings">&#9881;&#65039;</button>
         </div>
     </header>
 
     <main>
+        <!-- HERO -->
         <section class="hero" id="home">
             <div class="container">
                 <h1>Building a Better Future, Together</h1>
-                <p>Empowering communities through education, transparency, and sustainable partnerships. Join us in
-                    making a lasting impact.</p>
+                <p>Empowering communities through education, transparency, and sustainable partnerships. Join us in making a lasting impact.</p>
                 <div class="hero-btns">
                     <a href="#partnerships" class="btn-secondary">Corporate Partnership</a>
                 </div>
             </div>
         </section>
 
+        <!-- ABOUT -->
         <section class="about-section" id="about">
             <div class="container">
                 <h2 class="section-title">Our Mission</h2>
                 <div class="about-content">
-                    <p>The <strong>UB Association</strong> is a premier language academy dedicated to fostering
-                        professional English communication and academic excellence. We believe that mastering the
-                        English language is the key to unlocking global opportunities and achieving your personal and
-                        professional dreams.</p>
-                    <p>Our mission is to build a world where opportunities are abundant and everyone feels confident in
-                        their ability to achieve their dreams. Today, we carry this spirit forward by providing
-                        professional guidance and strategic support to our members.</p>
+                    <p>The <strong>UB Association</strong> is a premier language academy dedicated to fostering professional English communication and academic excellence. We believe that mastering the English language is the key to unlocking global opportunities and achieving your personal and professional dreams.</p>
+                    <p>Our mission is to build a world where opportunities are abundant and everyone feels confident in their ability to achieve their dreams. Today, we carry this spirit forward by providing professional guidance and strategic support to our members.</p>
                     <a href="#join" class="btn-join">Join Our Movement</a>
                 </div>
             </div>
         </section>
 
+        <!-- EVENTS -->
         <section class="about-section" id="events">
             <div class="container">
                 <h2 class="section-title">Events</h2>
                 <div class="about-content">
-                    <p>Stay tuned for upcoming events hosted by UB Association. We regularly organize workshops,
-                        seminars, and networking opportunities for our members.</p>
+                    <p>Stay tuned for upcoming events hosted by UB Association. We regularly organize workshops, seminars, and networking opportunities for our members.</p>
                 </div>
             </div>
         </section>
 
+        <!-- TRAINING -->
         <section class="team-section" id="training">
             <div class="container">
                 <h2 class="section-title">Training Programs</h2>
                 <div class="about-content" style="max-width:850px; margin:0 auto; text-align:center;">
-                    <p>We offer professional English communication training, academic preparation, and leadership
-                        development programs tailored to your goals.</p>
+                    <p>We offer professional English communication training, academic preparation, and leadership development programs tailored to your goals.</p>
                 </div>
             </div>
         </section>
 
+        <!-- NEWS -->
         <section class="about-section" id="news">
             <div class="container">
                 <h2 class="section-title">News</h2>
                 <div class="about-content">
-                    <p>The latest updates, announcements, and stories from UB Association and our community partners.
-                    </p>
+                    <p>The latest updates, announcements, and stories from UB Association and our community partners.</p>
                 </div>
             </div>
         </section>
 
+        <!-- BOOK ONLINE -->
         <section class="team-section" id="book">
             <div class="container">
                 <h2 class="section-title">Book Online</h2>
@@ -1561,6 +1482,7 @@
             </div>
         </section>
 
+        <!-- TEAM -->
         <section class="team-section" id="team">
             <div class="container">
                 <h2 class="section-title">Board of Directors</h2>
@@ -1569,11 +1491,12 @@
                         <div class="member-img">
                             <img src="static/member1.jpg" alt="President"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="avatar-placeholder" style="display:none;"><svg viewBox="0 0 24 24" fill="none"
-                                    stroke="#0047AB" stroke-width="1.5">
+                            <div class="avatar-placeholder" style="display:none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#0047AB" stroke-width="1.5">
                                     <circle cx="12" cy="8" r="4" />
                                     <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                                </svg></div>
+                                </svg>
+                            </div>
                         </div>
                         <h3>Member Name</h3>
                         <p class="role">PRESIDENT & FOUNDER</p>
@@ -1583,11 +1506,12 @@
                         <div class="member-img">
                             <img src="static/member2.jpg" alt="Vice President"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="avatar-placeholder" style="display:none;"><svg viewBox="0 0 24 24" fill="none"
-                                    stroke="#0047AB" stroke-width="1.5">
+                            <div class="avatar-placeholder" style="display:none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#0047AB" stroke-width="1.5">
                                     <circle cx="12" cy="8" r="4" />
                                     <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                                </svg></div>
+                                </svg>
+                            </div>
                         </div>
                         <h3>Member Name</h3>
                         <p class="role">VICE PRESIDENT</p>
@@ -1597,11 +1521,12 @@
                         <div class="member-img">
                             <img src="static/member3.jpg" alt="Treasurer"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="avatar-placeholder" style="display:none;"><svg viewBox="0 0 24 24" fill="none"
-                                    stroke="#0047AB" stroke-width="1.5">
+                            <div class="avatar-placeholder" style="display:none;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#0047AB" stroke-width="1.5">
                                     <circle cx="12" cy="8" r="4" />
                                     <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                                </svg></div>
+                                </svg>
+                            </div>
                         </div>
                         <h3>Member Name</h3>
                         <p class="role">TREASURER</p>
@@ -1611,6 +1536,7 @@
             </div>
         </section>
 
+        <!-- TRANSPARENCY -->
         <section id="transparency" class="transparency-section">
             <div class="container">
                 <div class="your-section-class">
@@ -1621,74 +1547,61 @@
                     <div class="doc-card">
                         <h3>Board of Directors</h3>
                         <p>Strategic leadership and governance structure.</p>
-                        <a href="#team" class="link">Meet Team →</a>
+                        <a href="#team" class="link">Meet Team &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact" class="about-section">
             <div class="container">
                 <h2 class="section-title">Contact Us</h2>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; max-width:900px; margin:0 auto;">
+                <div class="contact-grid">
 
                     <!-- Мэдээлэл -->
-                    <div
-                        style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px; padding:30px;">
-                        <p
-                            style="font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); margin:0 0 20px;">
-                            Get in touch</p>
+                    <div class="contact-card">
+                        <p class="contact-card-title">Get in touch</p>
 
-                        <div style="display:flex; gap:12px; margin-bottom:18px;">
-                            <div
-                                style="width:36px; height:36px; background:#eff6ff; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">
-                                ✉️</div>
+                        <div class="contact-info-row">
+                            <div class="contact-icon">&#9993;&#65039;</div>
                             <div>
                                 <p style="font-size:12px; color:var(--text-muted); margin:0 0 3px;">Email</p>
-                                <p style="margin:0; font-weight:600;"><a id="contactEmailLink" href="#"
-                                        style="color:#0047AB; text-decoration:none;"></a></p>
-                                <p style="font-size:12px; color:var(--text-muted); margin:4px 0 0;">For general
-                                    inquiries &amp; partnerships</p>
+                                <p style="margin:0; font-weight:600;">
+                                    <a id="contactEmailLink" href="#" style="color:#0047AB; text-decoration:none;"></a>
+                                </p>
+                                <p style="font-size:12px; color:var(--text-muted); margin:4px 0 0;">For general inquiries &amp; partnerships</p>
                             </div>
                         </div>
 
-                        <div style="display:flex; gap:12px; margin-bottom:18px;">
-                            <div
-                                style="width:36px; height:36px; background:#eff6ff; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">
-                                ⏰</div>
+                        <div class="contact-info-row">
+                            <div class="contact-icon">&#9200;&#65039;</div>
                             <div>
                                 <p style="font-size:12px; color:var(--text-muted); margin:0 0 3px;">Response time</p>
-                                <p style="margin:0; font-weight:600; color:var(--text-main);">1–2 business days</p>
+                                <p style="margin:0; font-weight:600; color:var(--text-main);">1&ndash;2 business days</p>
                             </div>
                         </div>
 
-                        <div style="display:flex; gap:12px;">
-                            <div
-                                style="width:36px; height:36px; background:#eff6ff; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">
-                                🕘</div>
+                        <div class="contact-info-row">
+                            <div class="contact-icon">&#128345;</div>
                             <div>
                                 <p style="font-size:12px; color:var(--text-muted); margin:0 0 3px;">Office hours</p>
-                                <p style="margin:0; font-weight:600; color:var(--text-main);">Mon – Fri, 9:00 AM – 6:00
-                                    PM</p>
+                                <p style="margin:0; font-weight:600; color:var(--text-main);">Mon &ndash; Fri, 9:00 AM &ndash; 6:00 PM</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Форм -->
-                    <div
-                        style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px; padding:30px;">
-                        <p
-                            style="font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); margin:0 0 20px;">
-                            Send a message</p>
-                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
-                            <input type="text" placeholder="Your name"
-                                style="padding:10px 12px; border:1px solid var(--border-color); border-radius:8px; background:var(--bg-page); color:var(--text-main); font-size:13px;">
-                            <input type="email" placeholder="Your email"
-                                style="padding:10px 12px; border:1px solid var(--border-color); border-radius:8px; background:var(--bg-page); color:var(--text-main); font-size:13px;">
+                    <div class="contact-card">
+                        <p class="contact-card-title">Send a message</p>
+
+                        <div class="contact-form-row2">
+                            <input type="text" class="contact-input" placeholder="Your name">
+                            <input type="email" class="contact-input" placeholder="Your email">
                         </div>
-                        <select
-                            style="width:100%; padding:10px 12px; border:1px solid var(--border-color); border-radius:8px; background:var(--bg-page); color:var(--text-main); font-size:13px; margin-bottom:10px;">
+
+                        <select class="contact-select">
                             <option value="" disabled selected>Topic</option>
                             <option>General inquiry</option>
                             <option>Training programs</option>
@@ -1696,13 +1609,11 @@
                             <option>Donation</option>
                             <option>Other</option>
                         </select>
-                        <textarea placeholder="Your message..."
-                            style="width:100%; padding:10px 12px; border:1px solid var(--border-color); border-radius:8px; background:var(--bg-page); color:var(--text-main); font-size:13px; height:100px; resize:vertical; box-sizing:border-box; margin-bottom:10px;"></textarea>
-                        <button onclick="submitContactForm()"
-                            style="background:#0047AB; color:white; border:none; padding:12px 24px; border-radius:8px; font-weight:600; font-size:14px; cursor:pointer; width:100%;">Send
-                            message →</button>
-                        <p style="font-size:11px; color:var(--text-muted); margin:8px 0 0; text-align:center;">Your
-                            information is never shared with third parties.</p>
+
+                        <textarea class="contact-textarea" placeholder="Your message..."></textarea>
+
+                        <button class="contact-submit" onclick="submitContactForm()">Send message &rarr;</button>
+                        <p style="font-size:11px; color:var(--text-muted); margin:8px 0 0; text-align:center;">Your information is never shared with third parties.</p>
                     </div>
 
                 </div>
@@ -1713,59 +1624,54 @@
 
     <!-- CHATBOT -->
     <div class="bonchat-container">
-        <button class="chat-toggle" onclick="toggleChat()">💬 Let's chat - BonChat?</button>
+        <button class="chat-toggle" onclick="toggleChat()">&#128172; Let's chat - BonChat?</button>
         <div id="chatWindow" class="chat-ui">
             <div class="chat-head">
                 <span>BonChat Support</span>
-                <button onclick="toggleChat()">✕</button>
+                <button onclick="toggleChat()">&#10005;</button>
             </div>
             <div id="chatBody" class="chat-msgs">
                 <div class="ai-bubble">Hello! Welcome to UB Association. How can I help you today?</div>
             </div>
             <div class="chat-input-wrapper">
                 <input type="text" id="userInput" placeholder="Ask about programs..." onkeypress="handleEnter(event)">
-                <button onclick="sendMessage()">➤</button>
+                <button onclick="sendMessage()">&#10148;</button>
             </div>
         </div>
     </div>
 
     <!-- FLOATING DONATE -->
-    <button class="floating-donate" onclick="openDonate()">♥ Donate Now</button>
+    <button class="floating-donate" onclick="openDonate()">&#9829; Donate Now</button>
 
     <!-- SETTINGS PANEL -->
     <div id="settingsOverlay" onclick="closeSettingsOutside(event)">
         <div class="settings-panel">
             <div class="settings-head">
-                <h3>⚙️ Settings</h3>
-                <button class="settings-close" onclick="closeSettings()">✕</button>
+                <h3>&#9881;&#65039; Settings</h3>
+                <button class="settings-close" onclick="closeSettings()">&#10005;</button>
             </div>
             <div class="settings-body">
                 <div class="settings-group">
                     <div class="settings-group-title">Appearance</div>
                     <div style="margin-bottom:14px;">
-                        <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Theme
-                        </div>
+                        <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Theme</div>
                         <div class="theme-selector">
                             <div class="theme-option active" id="themeLight" onclick="setTheme('light')">
                                 <div class="theme-preview theme-preview-light"></div>
-                                <span>☀️ Light</span>
+                                <span>&#9728;&#65039; Light</span>
                             </div>
                             <div class="theme-option" id="themeDark" onclick="setTheme('dark')">
                                 <div class="theme-preview theme-preview-dark"></div>
-                                <span>🌙 Dark</span>
+                                <span>&#127769; Dark</span>
                             </div>
                         </div>
                     </div>
                     <div style="margin-bottom:14px;">
-                        <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Font
-                            Size</div>
+                        <div style="font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:10px;">Font Size</div>
                         <div class="font-size-selector">
-                            <button class="font-opt" id="fontSmall" onclick="setFontSize('small')"
-                                style="font-size:12px;">A</button>
-                            <button class="font-opt active" id="fontMedium" onclick="setFontSize('medium')"
-                                style="font-size:15px;">A</button>
-                            <button class="font-opt" id="fontLarge" onclick="setFontSize('large')"
-                                style="font-size:18px;">A</button>
+                            <button class="font-opt" id="fontSmall" onclick="setFontSize('small')" style="font-size:12px;">A</button>
+                            <button class="font-opt active" id="fontMedium" onclick="setFontSize('medium')" style="font-size:15px;">A</button>
+                            <button class="font-opt" id="fontLarge" onclick="setFontSize('large')" style="font-size:18px;">A</button>
                         </div>
                     </div>
                 </div>
@@ -1774,62 +1680,58 @@
                     <div class="settings-group-title">Accessibility</div>
                     <div class="setting-row">
                         <div class="setting-row-left">
-                            <div class="setting-icon">✨</div>
+                            <div class="setting-icon">&#10024;</div>
                             <div>
                                 <div class="setting-label">Animations</div>
                                 <div class="setting-desc">Page transitions & effects</div>
                             </div>
                         </div>
-                        <label class="toggle"><input type="checkbox" id="toggleAnimations" checked
-                                onchange="applyAnimations(this)"><span class="toggle-slider"></span></label>
+                        <label class="toggle"><input type="checkbox" id="toggleAnimations" checked onchange="applyAnimations(this)"><span class="toggle-slider"></span></label>
                     </div>
                     <div class="setting-row">
                         <div class="setting-row-left">
-                            <div class="setting-icon">🔔</div>
+                            <div class="setting-icon">&#128276;</div>
                             <div>
                                 <div class="setting-label">Notifications</div>
                                 <div class="setting-desc">Event & program alerts</div>
                             </div>
                         </div>
-                        <label class="toggle"><input type="checkbox" id="toggleNotif" checked
-                                onchange="saveSettings()"><span class="toggle-slider"></span></label>
+                        <label class="toggle"><input type="checkbox" id="toggleNotif" checked onchange="saveSettings()"><span class="toggle-slider"></span></label>
                     </div>
                     <div class="setting-row">
                         <div class="setting-row-left">
-                            <div class="setting-icon">💬</div>
+                            <div class="setting-icon">&#128172;</div>
                             <div>
                                 <div class="setting-label">Chat Widget</div>
                                 <div class="setting-desc">Show BonChat button</div>
                             </div>
                         </div>
-                        <label class="toggle"><input type="checkbox" id="toggleChatWidget" checked
-                                onchange="applyChatWidget(this)"><span class="toggle-slider"></span></label>
+                        <label class="toggle"><input type="checkbox" id="toggleChatWidget" checked onchange="applyChatWidget(this)"><span class="toggle-slider"></span></label>
                     </div>
                     <div class="setting-row">
                         <div class="setting-row-left">
-                            <div class="setting-icon">📌</div>
+                            <div class="setting-icon">&#128204;</div>
                             <div>
                                 <div class="setting-label">Sticky Header</div>
                                 <div class="setting-desc">Keep navbar at top</div>
                             </div>
                         </div>
-                        <label class="toggle"><input type="checkbox" id="toggleSticky" checked
-                                onchange="applyStickyHeader(this)"><span class="toggle-slider"></span></label>
+                        <label class="toggle"><input type="checkbox" id="toggleSticky" checked onchange="applyStickyHeader(this)"><span class="toggle-slider"></span></label>
                     </div>
                 </div>
                 <div class="settings-divider"></div>
                 <div class="settings-group">
                     <div class="settings-group-title">Language</div>
                     <select class="lang-select" id="langSelect" onchange="saveSettings()">
-                        <option value="en">🇺🇸 English</option>
-                        <option value="mn">🇲🇳 Монгол</option>
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">&#127482;&#127480; English</option>
+                        <option value="mn">&#127474;&#127475; &#1052;&#1086;&#1085;&#1075;&#1086;&#1083;</option>
+                        <option value="zh">&#127464;&#127475; &#20013;&#25991;</option>
+                        <option value="ko">&#127472;&#127479; &#54620;&#44397;&#50612;</option>
+                        <option value="ja">&#127471;&#127477; &#26085;&#26412;&#35486;</option>
+                        <option value="ru">&#127479;&#127482; &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
                     </select>
                 </div>
-                <button class="settings-reset" onclick="resetSettings()">↺ Reset to Defaults</button>
+                <button class="settings-reset" onclick="resetSettings()">&#8635; Reset to Defaults</button>
             </div>
         </div>
     </div>
@@ -1838,8 +1740,8 @@
     <div id="donateOverlay" onclick="closeDonateOutside(event)">
         <div class="donate-modal">
             <div class="donate-header">
-                <button class="donate-close" onclick="closeDonate()">✕</button>
-                <div class="heart-icon">❤️</div>
+                <button class="donate-close" onclick="closeDonate()">&#10005;</button>
+                <div class="heart-icon">&#10084;&#65039;</div>
                 <h2>Make a Donation</h2>
                 <p>Your support empowers communities and transforms lives.</p>
             </div>
@@ -1862,8 +1764,8 @@
                 <div class="donate-name-row">
                     <input type="text" id="donateName" placeholder="e.g. John Smith">
                 </div>
-                <button class="donate-submit-btn" onclick="submitDonation()">Donate Now →</button>
-                <div id="donateSuccess">✅ Thank you for your generous donation! We will be in touch soon.</div>
+                <button class="donate-submit-btn" onclick="submitDonation()">Donate Now &rarr;</button>
+                <div id="donateSuccess">&#9989; Thank you for your generous donation! We will be in touch soon.</div>
             </div>
         </div>
     </div>
@@ -1873,45 +1775,29 @@
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div style="display:flex;border-bottom:2px solid var(--border-color);margin-bottom:24px;">
-                <button id="tabLogin" onclick="showTab('login')"
-                    style="flex:1;padding:12px;border:none;background:none;font-size:15px;font-weight:600;cursor:pointer;color:#0046ad;border-bottom:2px solid #0046ad;margin-bottom:-2px;">Sign
-                    In</button>
-                <button id="tabSignup" onclick="showTab('signup')"
-                    style="flex:1;padding:12px;border:none;background:none;font-size:15px;font-weight:600;cursor:pointer;color:#94a3b8;border-bottom:2px solid transparent;margin-bottom:-2px;">Create
-                    Account</button>
+                <button id="tabLogin" onclick="showTab('login')" style="flex:1;padding:12px;border:none;background:none;font-size:15px;font-weight:600;cursor:pointer;color:#0046ad;border-bottom:2px solid #0046ad;margin-bottom:-2px;">Sign In</button>
+                <button id="tabSignup" onclick="showTab('signup')" style="flex:1;padding:12px;border:none;background:none;font-size:15px;font-weight:600;cursor:pointer;color:#94a3b8;border-bottom:2px solid transparent;margin-bottom:-2px;">Create Account</button>
             </div>
             <form id="loginForm">
                 <h2 style="margin:0 0 6px;color:#002d72;font-size:22px;">Welcome Back</h2>
                 <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Sign in to your account</p>
-                <div class="input-group"><label for="loginEmail">Email Address</label><input type="email"
-                        id="loginEmail" placeholder="name@example.com" required></div>
-                <div class="input-group"><label for="loginPassword">Password</label><input type="password"
-                        id="loginPassword" placeholder="••••••••" required></div>
+                <div class="input-group"><label for="loginEmail">Email Address</label><input type="email" id="loginEmail" placeholder="name@example.com" required></div>
+                <div class="input-group"><label for="loginPassword">Password</label><input type="password" id="loginPassword" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required></div>
                 <p id="loginError" style="color:#e74c3c;font-size:13px;margin-bottom:10px;min-height:18px;"></p>
                 <button type="submit" class="submit-btn">Sign In</button>
-                <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Don't have an
-                    account? <a href="#" onclick="showTab('signup')" style="color:#0046ad;font-weight:600;">Create
-                        one</a></p>
+                <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Don't have an account? <a href="#" onclick="showTab('signup')" style="color:#0046ad;font-weight:600;">Create one</a></p>
             </form>
             <form id="signupForm" style="display:none;">
                 <h2 style="margin:0 0 6px;color:#002d72;font-size:22px;">Create Account</h2>
                 <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Join UB Association today</p>
-                <div class="input-group"><label for="signupName">Full Name</label><input type="text" id="signupName"
-                        placeholder="John Doe" required></div>
-                <div class="input-group"><label for="signupEmail">Email Address</label><input type="email"
-                        id="signupEmail" placeholder="name@example.com" required></div>
-                <div class="input-group"><label for="signupPassword">Password</label><input type="password"
-                        id="signupPassword" placeholder="At least 6 characters" required></div>
-                <div class="input-group"><label for="signupConfirm">Confirm Password</label><input type="password"
-                        id="signupConfirm" placeholder="••••••••" required></div>
+                <div class="input-group"><label for="signupName">Full Name</label><input type="text" id="signupName" placeholder="John Doe" required></div>
+                <div class="input-group"><label for="signupEmail">Email Address</label><input type="email" id="signupEmail" placeholder="name@example.com" required></div>
+                <div class="input-group"><label for="signupPassword">Password</label><input type="password" id="signupPassword" placeholder="At least 6 characters" required></div>
+                <div class="input-group"><label for="signupConfirm">Confirm Password</label><input type="password" id="signupConfirm" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required></div>
                 <p id="signupError" style="color:#e74c3c;font-size:13px;margin-bottom:10px;min-height:18px;"></p>
-                <div id="signupSuccess"
-                    style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:14px;margin-bottom:16px;color:#166534;font-size:14px;">
-                    ✅ Account created! Please check your email to confirm your account.</div>
+                <div id="signupSuccess" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:14px;margin-bottom:16px;color:#166534;font-size:14px;">&#9989; Account created! Please check your email to confirm your account.</div>
                 <button type="submit" class="submit-btn">Create Account</button>
-                <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Already have an
-                    account? <a href="#" onclick="showTab('login')" style="color:#0046ad;font-weight:600;">Sign in</a>
-                </p>
+                <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Already have an account? <a href="#" onclick="showTab('login')" style="color:#0046ad;font-weight:600;">Sign in</a></p>
             </form>
         </div>
     </div>
@@ -2004,9 +1890,8 @@
             document.getElementById('langSelect').value = 'en';
         }
 
-        window.addEventListener('DOMContentLoaded', loadSettings);
-
-
+         window.addEventListener('DOMContentLoaded', loadSettings);
+ 
         // DONATE
         window.openDonate = function () { document.getElementById('donateOverlay').classList.add('active'); document.getElementById('donateSuccess').style.display = 'none'; };
         window.closeDonate = function () { document.getElementById('donateOverlay').classList.remove('active'); };
@@ -2020,8 +1905,7 @@
             document.getElementById('donateName').value = '';
             document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
         };
-
-    </script>
+     </script>
 
 </body>
 
